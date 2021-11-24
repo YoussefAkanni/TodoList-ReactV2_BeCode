@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500;700&display=swap");
+
+$font-1: "Outfit", sans-serif;
+
+$color-1: #ffffff;
+$color-2: #f3f3f3;
+$color-pink: #f4a4a4;
+$color-blue: #4ea1d3;
+$color-purple: #8884ff;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0.4rem auto;
+  width: 100vw;
+  height: 100vh;
+  font-family: $font-1;
+  font-size: 22px;
+  background-color: $color-2;
+}
+
+.purple {
+  z-index: -1;
+  position: FIXED;
+  top: 59px;
+  left: 53.4px;
+  width: 2522px;
+  height: 2500px;
+  border-radius: 50%;
+  background: $color-purple;
+}

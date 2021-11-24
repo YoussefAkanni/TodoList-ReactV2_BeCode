@@ -1,0 +1,106 @@
+.todolist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: $font-1;
+    width: 100vw;
+    button {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: white;
+      border-radius: 1px;
+      border: none;
+      width: 200px;
+      height: 40px;
+      background: $color-purple;
+      box-shadow: 0 1px 4px 1px rgb(0 0 0 / 15%);
+      cursor: pointer;
+    }
+  }
+  h1 {
+    color: $color-purple;
+    text-transform: uppercase;
+  }
+
+  .focus {
+    z-index: 99;
+    width: 100000px;
+    height: 100000px;
+    background: rgba(0, 0, 0, 0.576);
+    position: absolute;
+    top: 0;
+  }
+  form {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 10px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border: none;
+      font-size: 24px;
+      background: none;
+      cursor: pointer;
+    }
+    .text {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      p {
+        font-size: 0.8rem;
+        color: red;
+        align-self: center;
+      }
+    }
+    input,
+    textarea {
+      margin: 10px;
+      font-family: $font-1;
+      padding: 10px;
+      box-shadow: 0 1px 4px 1px rgb(0 0 0 / 15%);
+      width: 400px;
+      height: 100px;
+      resize: none;
+      border: 1px solid $color-purple;
+      border-radius: 3px;
+    }
+
+    .title {
+      height: 40px;
+    }
+
+    input[type="submit"] {
+      background-image: url(../../assets/white-24dp/2x/baseline_add_white_24dp.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-color: $color-pink;
+      display: flex;
+      justify-content: center;
+      width: 40px;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background-color: $color-blue;
+      }
+    }
+  }
+  ul {
+    width: 100vw;
+  }
+}
