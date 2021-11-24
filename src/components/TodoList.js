@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import List from "./List";
 
 const TodoList = () => {
@@ -8,6 +8,20 @@ const TodoList = () => {
   const [errorTitle, setErrorTitle] = useState(false);
   const [errorContent, setErrorContent] = useState(false);
   const [createTask, setCreateTask] = useState(false);
+
+  useEffect(() => {
+    const temp = localStorage.getItem("todos");
+    const loadedTodos = JSON.parse(temp);
+
+    if (loadedTodos) {
+      props[0].setTodos(loadedTodos);
+    }
+  }, []);
+
+  useEffect(() => {
+    const savedTodo = JSON.stringify(todos);
+    localStorage.setItem("todos", savedTodo);
+  }, [todos]);
 
   let props = [
     {
